@@ -57,7 +57,8 @@
         <div class="container">
 
             <a href="#" class="logo">
-                <img src="./assets/images/logo.svg" width="138" height="28" alt="booken home">
+                <%--                <img src="./assets/images/logo.svg" width="138" height="28" alt="booken home">--%>
+                <h2>Novel Nest</h2>
             </a>
 
             <div class="input-wrapper">
@@ -78,9 +79,15 @@
                     <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
                 </button>
 
-                <button class="header-action-btn" aria-label="user" title="User">
-                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                </button>
+                <%--                <button class="header-action-btn" aria-label="user" title="User">--%>
+                <%--                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>--%>
+                <%--                </button>--%>
+
+                <a href="./login.jsp">
+                    <button type="button" class="btn btn-outline-primary"
+                            style="border-radius: 5px; padding: 13px 30px;">Login
+                    </button>
+                </a>
 
             </div>
 
@@ -142,9 +149,17 @@
     <div class="overlay" data-overlay data-nav-toggler></div>
 </header>
 
-
-
-
+<section>
+    <div class="card">
+        <h1>Cart</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+</section>
 
 <main>
     <article>
@@ -165,7 +180,8 @@
                     </h1>
 
                     <p class="hero-text">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration
                         in some formr.
                     </p>
 
@@ -193,9 +209,6 @@
         </section>
 
 
-
-
-
         <!--
           - #FEATURE
         -->
@@ -209,7 +222,8 @@
                         <div class="feature-card">
 
                             <div class="card-icon">
-                                <img src="./assets/images/feature-1.png" width="100" height="100" loading="lazy" alt="feature icon"
+                                <img src="./assets/images/feature-1.png" width="100" height="100" loading="lazy"
+                                     alt="feature icon"
                                      class="w-100">
                             </div>
 
@@ -226,7 +240,8 @@
                         <div class="feature-card">
 
                             <div class="card-icon">
-                                <img src="./assets/images/feature-2.png" width="100" height="100" loading="lazy" alt="feature icon"
+                                <img src="./assets/images/feature-2.png" width="100" height="100" loading="lazy"
+                                     alt="feature icon"
                                      class="w-100">
                             </div>
 
@@ -243,7 +258,8 @@
                         <div class="feature-card">
 
                             <div class="card-icon">
-                                <img src="./assets/images/feature-3.png" width="100" height="100" loading="lazy" alt="feature icon"
+                                <img src="./assets/images/feature-3.png" width="100" height="100" loading="lazy"
+                                     alt="feature icon"
                                      class="w-100">
                             </div>
 
@@ -260,7 +276,8 @@
                         <div class="feature-card">
 
                             <div class="card-icon">
-                                <img src="./assets/images/feature-4.png" width="100" height="100" loading="lazy" alt="feature icon"
+                                <img src="./assets/images/feature-4.png" width="100" height="100" loading="lazy"
+                                     alt="feature icon"
                                      class="w-100">
                             </div>
 
@@ -277,10 +294,6 @@
 
             </div>
         </section>
-
-
-
-
 
 
         <!--
@@ -304,7 +317,8 @@
                             <span class="card-badge">New</span>
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-1.png" width="384" height="480" loading="lazy" alt="Black Night"
+                                <img src="./assets/images/book-1.png" width="384" height="480" loading="lazy"
+                                     alt="Black Night"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -402,7 +416,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-3.png" width="384" height="480" loading="lazy" alt="Open The Sky"
+                                <img src="./assets/images/book-3.png" width="384" height="480" loading="lazy"
+                                     alt="Open The Sky"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -451,7 +466,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-4.png" width="384" height="480" loading="lazy" alt="Book Hard Cover"
+                                <img src="./assets/images/book-4.png" width="384" height="480" loading="lazy"
+                                     alt="Book Hard Cover"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -549,7 +565,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-6.png" width="384" height="480" loading="lazy" alt="By The Air"
+                                <img src="./assets/images/book-6.png" width="384" height="480" loading="lazy"
+                                     alt="By The Air"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -647,7 +664,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-8.png" width="384" height="480" loading="lazy" alt="Stay Healthy"
+                                <img src="./assets/images/book-8.png" width="384" height="480" loading="lazy"
+                                     alt="Stay Healthy"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -698,9 +716,6 @@
         </section>
 
 
-
-
-
         <!--
           - #OFFER
         -->
@@ -714,7 +729,8 @@
                 <h2 class="h2 section-title">All books are 50% off now! Don't miss such a deal!</h2>
 
                 <p class="section-text">
-                    You will learn how to animate shapes like circles, lines, and polygons. You'll also learn how to animate CSS
+                    You will learn how to animate shapes like circles, lines, and polygons. You'll also learn how to
+                    animate CSS
                     properties
                     like color and size.
                 </p>
@@ -753,9 +769,6 @@
         </section>
 
 
-
-
-
         <!--
           - #POPULAR
         -->
@@ -791,7 +804,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-9.png" width="384" height="480" loading="lazy" alt="Self Care"
+                                <img src="./assets/images/book-9.png" width="384" height="480" loading="lazy"
+                                     alt="Self Care"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -840,7 +854,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-10.png" width="384" height="480" loading="lazy" alt="Welcome to Space"
+                                <img src="./assets/images/book-10.png" width="384" height="480" loading="lazy"
+                                     alt="Welcome to Space"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -889,7 +904,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-11.png" width="384" height="480" loading="lazy" alt="Monsoon"
+                                <img src="./assets/images/book-11.png" width="384" height="480" loading="lazy"
+                                     alt="Monsoon"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -1036,7 +1052,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-14.png" width="384" height="480" loading="lazy" alt="Food Poison"
+                                <img src="./assets/images/book-14.png" width="384" height="480" loading="lazy"
+                                     alt="Food Poison"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -1085,7 +1102,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-15.png" width="384" height="480" loading="lazy" alt="Design"
+                                <img src="./assets/images/book-15.png" width="384" height="480" loading="lazy"
+                                     alt="Design"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -1134,7 +1152,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-16.png" width="384" height="480" loading="lazy" alt="World News"
+                                <img src="./assets/images/book-16.png" width="384" height="480" loading="lazy"
+                                     alt="World News"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -1185,9 +1204,6 @@
         </section>
 
 
-
-
-
         <!--
           - #BLOG
         -->
@@ -1230,7 +1246,8 @@
                                 </ul>
 
                                 <p class="card-text">
-                                    The summer holidays are wonderful. Dressing for them can be significantly less so: Packing light...
+                                    The summer holidays are wonderful. Dressing for them can be significantly less so:
+                                    Packing light...
                                 </p>
 
                                 <a href="#" class="btn card-btn">Read More...</a>
@@ -1267,7 +1284,8 @@
                                 </ul>
 
                                 <p class="card-text">
-                                    The summer holidays are wonderful. Dressing for them can be significantly less so: Packing light...
+                                    The summer holidays are wonderful. Dressing for them can be significantly less so:
+                                    Packing light...
                                 </p>
 
                                 <a href="#" class="btn card-btn">Read More...</a>
@@ -1304,7 +1322,8 @@
                                 </ul>
 
                                 <p class="card-text">
-                                    The summer holidays are wonderful. Dressing for them can be significantly less so: Packing light...
+                                    The summer holidays are wonderful. Dressing for them can be significantly less so:
+                                    Packing light...
                                 </p>
 
                                 <a href="#" class="btn card-btn">Read More...</a>
@@ -1323,9 +1342,6 @@
 </main>
 
 
-
-
-
 <!--
   - #FOOTER
 -->
@@ -1342,7 +1358,8 @@
                 </a>
 
                 <p class="footer-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor inci ut labore et dolore
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor inci ut labore et
+                    dolore
                     consectetur
                     adipisicing elit sed do eiusmod tempor.
                 </p>
@@ -1474,7 +1491,7 @@
         <div class="container">
 
             <p class="copyright">
-                Copyright 2022 | Made With Love by codewithsadee.
+                Copyright 2025 <a href="#">Booken</a> All Rights Reserved
             </p>
 
             <img src="./assets/images/payment-mehtod.png" width="311" height="30" loading="lazy" alt="Payment method"
@@ -1486,21 +1503,16 @@
 </footer>
 
 
-
-
-
 <!--
   - #BACK TO TOP
 -->
+
 
 <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
 </a>
 
-
-
-
-
+<script src="./assets/js/app.js"></script>
 <!--
   - custom js link
 -->
