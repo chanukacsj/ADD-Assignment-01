@@ -63,19 +63,24 @@
     </div> -->
     <div class="forms-container">
         <div class="signin-signup">
-            <form action="#" class="sign-in-form">
+            <form action="login-servlet" method="post" class="sign-in-form">
+
                 <h2 class="title">Login</h2>
+
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Email" />
+                    <input type="email" id="email" name="email" placeholder="Email" />
                 </div>
+
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" />
+                    <input type="password" id="password" name="password"placeholder="Password" />
                 </div>
                 <!-- <input type="submit" value="Login"  class="btn solid" /> -->
-                <a href="/index.html"
-                   class="button btn-outline-primary">Login</a>
+<%--                <a href=""--%>
+<%--                   class="button btn-outline-primary">Login</a>--%>
+                <input class="button btn-outline-primary" type="submit" style="font-size: 13px; padding-bottom: 36px"  value="Login">
+
                 <p class="social-text">Or Sign in with social platforms</p>
                 <div class="social-media">
                     <a href="#" class="social-icon">

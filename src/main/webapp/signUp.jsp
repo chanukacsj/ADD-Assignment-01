@@ -64,22 +64,24 @@
     </div> -->
     <div class="forms-container">
         <div class="signin-signup">
-            <form action="#" class="sign-in-form">
+
+            <form  action="user-Servlet" method="post"  class="sign-in-form">
                 <h2 class="title">Sign Up</h2>
+
                 <div class="input-field mt-4">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Email" />
+                    <input type="email" id="email" name="email" placeholder="Email" />
                 </div>
+
                 <div class="input-field mt-4">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" />
+                    <input type="password" id="password" name="password"  placeholder="Password" />
                 </div>
-                <P class="text mt-2">Already have an account? <a href="login.jsp">Login</a></P>
-                <!-- <input type="submit" value="Login"  class="btn solid" /> -->
-                <a href="/index.jsp"
-                   class="button btn-outline-primary" style="font-size: 13px;">Sign Up</a>
 
+                <P class="text mt-2">Already have an account? <a href="login.jsp">Login</a></P>
+                <input class="button btn-outline-primary" type="submit" style="font-size: 13px; padding-bottom: 36px"  value="Sign Up">
             </form>
+
         </div>
     </div>
 </div>

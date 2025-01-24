@@ -18,7 +18,12 @@
     <title>Booken - Get Your New Book Collections</title>
     <meta name="title" content="Booken - Get Your New Book Collections">
     <meta name="description" content="This is a Book eCommerce html template made by codewithsadee">
-
+    <style>
+        .dropdown{
+            margin-top: 6px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--
       - favicon
     -->
@@ -122,7 +127,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="navbar-link">Shop</a>
+                        <a href="#FEATURED-COLLECTION" class="navbar-link">Shop</a>
                     </li>
 
                     <li>
@@ -130,7 +135,23 @@
                     </li>
 
                     <li>
-                        <a href="#" class="navbar-link">Contact</a>
+                        <a href="product.jsp" class="navbar-link">Product</a>
+                    </li>
+
+
+                    <li>
+                        <%--                        <a href="#" class="navbar-link">Contact</a>--%>
+                        <div class="dropdown">
+                            <button class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" style="font-size: 20px;">
+                                Categories
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="childrenBook.jsp">Children’s Books</a></li>
+                                <li><a class="dropdown-item" href="mystery&Thriller.jsp">Mystery & Thriller</a></li>
+                                <li><a class="dropdown-item" href="romance.jsp">Romance</a></li>
+                            </ul>
+                        </div>
                     </li>
 
                 </ul>
@@ -300,7 +321,7 @@
           - #FEATURED COLLECTION
         -->
 
-        <section class="section featured" aria-label="featured collection">
+        <section class="section featured" id="FEATURED-COLLECTION" aria-label="featured collection">
             <div class="container">
 
                 <h2 class="h2 section-title">Featured Collections</h2>
@@ -1517,6 +1538,8 @@
   - custom js link
 -->
 <script src="./assets/js/script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 <!--
   - ionicon link
