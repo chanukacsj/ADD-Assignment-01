@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 
 public class ProductDTO {
+
+    private int productID;
+
     private String name;
 
     private String description;
@@ -18,4 +21,6 @@ public class ProductDTO {
     private int quantity;
 
     private String imageUrl;
+
+    int CategoryID;
 }
