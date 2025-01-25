@@ -42,6 +42,7 @@
         th {
             background-color: #f2f2f2;
         }
+
         form .form-label {
             color: black;
         }
@@ -297,12 +298,12 @@
                                         <%--                                        <input class="button btn-outline-primary" type="submit" style="font-size: 13px; padding-bottom: 36px"  value="Add Product">--%>
 
 
-<%--                                        <button id="btn_update_student" type="submit" class="btn btn-primary"--%>
-<%--                                                style="border-radius: 12%; padding: 2% 5% ;">Update--%>
-<%--                                        </button>--%>
-<%--                                        <button id="btn_delete_student" type="submit" class="btn btn-primary"--%>
-<%--                                                style="border-radius: 12%; padding: 2% 5% ;">Delete--%>
-<%--                                        </button>--%>
+                                        <%--                                        <button id="btn_update_student" type="submit" class="btn btn-primary"--%>
+                                        <%--                                                style="border-radius: 12%; padding: 2% 5% ;">Update--%>
+                                        <%--                                        </button>--%>
+                                        <%--                                        <button id="btn_delete_student" type="submit" class="btn btn-primary"--%>
+                                        <%--                                                style="border-radius: 12%; padding: 2% 5% ;">Delete--%>
+                                        <%--                                        </button>--%>
                                         <button id="btn_clear_student" type="submit" class="btn btn-primary"
                                                 style="border-radius: 12%; padding: 2% 5% ;">Clear
                                         </button>
@@ -313,50 +314,65 @@
                     </div>
                 </div>
                 <!-- Update Product Modal -->
-                <div class="modal fade" id="updateProductModal" tabindex="-1" aria-labelledby="updateProductModalLabel" aria-hidden="true">
+                <div class="modal fade" id="updateProductModal" tabindex="-1" aria-labelledby="updateProductModalLabel"
+                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="updateProductModalLabel" style="color: #1C1F25">Update Product</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title" id="updateProductModalLabel" style="color: #1C1F25">Update
+                                    Product</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form id="updateProductForm">
+                                <form id="updateProductForm" action="product-update" method="post">
                                     <div class="mb-3">
                                         <label for="update_product_id" class="form-label">Product ID</label>
-                                        <input type="text" class="form-control" name="update_product_id" id="update_product_id" >
+                                        <input type="text" class="form-control" name="update_product_id"
+                                               id="update_product_id">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="update_product_id" class="form-label">Product ID</label>
-                                        <input type="text" class="form-control" name="update_product_name" id="update_product_name" >
+                                        <label for="update_product_id" class="form-label">Product Name</label>
+                                        <input type="text" class="form-control" name="update_product_name"
+                                               id="update_product_name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="update_product_description" class="form-label">Description</label>
-                                        <input type="text" class="form-control" name="update_product_description" id="update_product_description" placeholder="Enter product description" required>
+                                        <input type="text" class="form-control" name="update_product_description"
+                                               id="update_product_description" placeholder="Enter product description"
+                                               required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="update_product_price" class="form-label">Price</label>
-                                        <input type="number" class="form-control" name="update_product_price" id="update_product_price" placeholder="Enter product price" required>
+                                        <input type="number" class="form-control" name="update_product_price"
+                                               id="update_product_price" placeholder="Enter product price" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="update_product_quantity" class="form-label">Quantity</label>
-                                        <input type="number" class="form-control" name="update_product_quantity" id="update_product_quantity" placeholder="Enter product quantity" required>
+                                        <input type="number" class="form-control" name="update_product_quantity"
+                                               id="update_product_quantity" placeholder="Enter product quantity"
+                                               required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="update_product_category" class="form-label">Category ID</label>
-                                        <input type="text" class="form-control" name="update_product_category" id="update_product_category" placeholder="Enter category ID" required>
+                                        <input type="text" class="form-control" name="update_product_category"
+                                               id="update_product_category" placeholder="Enter category ID" required>
                                     </div>
                                     <div id="current_product_image_wrapper" class="mb-3" style="display: none;">
                                         <label class="form-label">Current Product Image</label>
-                                        <img id="current_product_image" src="" name="current_product_image" alt="Product Image" style="width: 100%; max-height: 200px;">
+                                        <img id="current_product_image" src="" name="current_product_image"
+                                             alt="Product Image" style="width: 100%; max-height: 200px;">
                                     </div>
                                     <div class="form-group mb-4">
                                         <label>Attach New Product Image</label>
-                                        <input type="file" id="update_product_image" name="update_product_image" />
+                                        <input type="file" id="update_product_image" name="update_product_image"/>
                                     </div>
                                     <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
-                                        <button id="btn_update_product" type="submit" class="btn btn-primary">Update</button>
+                                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">
+                                            Cancel
+                                        </button>
+                                        <button id="btn_update_product" type="submit" class="btn btn-primary">Update
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -364,7 +380,29 @@
                     </div>
                 </div>
 
+                <!-- Display Feedback Messages -->
+                <%
+                    String status = request.getParameter("status");
+                    String message = request.getParameter("message");
 
+                    if (status != null && message != null) {
+                        if ("success".equals(status)) {
+                %>
+                <div class="alert alert-success" role="alert">
+                    <%= message %>
+                </div>
+                <%
+                } else if ("failure".equals(status) || "error".equals(status)) {
+                %>
+                <div class="alert alert-danger" role="alert">
+                    <%= message %>
+                </div>
+                <%
+                        }
+                    }
+                %>
+
+                <%--//////--%>
                 <%
                     List<ProductDTO> productList = (List<ProductDTO>) request.getAttribute("productList");
                     if (productList != null && !productList.isEmpty()) {
@@ -376,9 +414,9 @@
                     <thead>
                     <tr>
                         <td>ID</td>
-                        <td>Description</td>
-<%--                        <td>Image</td>--%>
                         <td>Name</td>
+                        <td>Description</td>
+                        <%--                        <td>Image</td>--%>
                         <td>Price</td>
                         <td>Qty</td>
                         <td>Category ID</td>
@@ -393,11 +431,11 @@
                     <tr>
                         <td><%= product.getProductID() %>
                         </td>
+                        <td><%= product.getName() %>
+                        </td>
                         <td><%= product.getDescription() %>
                         </td>
-<%--                        <td><%= product.getImageUrl() %>--%>
-                        </td>
-                        <td><%= product.getName() %>
+                        <%--                        <td><%= product.getImageUrl() %>--%>
                         </td>
                         <td><%= product.getPrice() %>
                         </td>
@@ -413,9 +451,11 @@
                             </button>
 
                             <button class="btn btn-danger btn-sm"
-                                    style="padding: 2px 2px;display: flex;flex-direction: row; border-radius: 0;  "
-                                    onclick="deleteProduct('<%= product.getProductID() %>')">Delete
+                                    style="padding: 2px 2px; display: flex; flex-direction: row; border-radius: 0;"
+                                    onclick="deleteProduct('<%= product.getProductID() %>')">
+                                Delete
                             </button>
+
                         </td>
                     </tr>
                     <% } %>
@@ -430,6 +470,7 @@
                     }
                 %>
             </div>
+
 
         </section>
     </article>
@@ -646,13 +687,44 @@
     };
 
 
-    // Function to handle product deletion
+    <%--// Function to handle product deletion--%>
+    <%--const deleteProduct = (productID) => {--%>
+    <%--        console.log(productID)--%>
+    <%--    if (confirm('Are you sure you want to delete this product?')) {--%>
+    <%--        // Corrected string interpolation and redirect--%>
+    <%--        window.location.href = `/AAD_Assingment_01_war_exploded/product-delete-servlet?productID=${productID}`;--%>
+    <%--    }--%>
+    <%--};--%>
+
     const deleteProduct = (productID) => {
         if (confirm('Are you sure you want to delete this product?')) {
-            // Redirect to a servlet or use AJAX for deletion
-            window.location.href = `<%= request.getContextPath() %>/delete-product-servlet?productID=${productID}`;
+            // Use Fetch API to send a POST request for deletion
+            fetch('/AAD_Assingment_01_war_exploded/product-delete-servlet', {
+                method: 'POST',
+                body: new URLSearchParams({
+                    'productID': productID
+                }),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Redirect or update the page after deletion
+                        window.location.href = '/AAD_Assingment_01_war_exploded/all-product-servlet'; // Redirect to all products page
+
+                    } else {
+                        alert("Error deleting the product.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("An error occurred.");
+                });
         }
     };
+
+
 </script>
 </body>
 </html>

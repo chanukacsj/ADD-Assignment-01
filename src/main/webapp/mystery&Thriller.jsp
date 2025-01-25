@@ -19,6 +19,12 @@
         .dropdown{
             margin-top: 6px;
         }
+        .img-mystery{
+            width: 175px;
+            height: 236px;
+            margin-top: 44px;
+            margin-left: 44px;
+        }
     </style>
     <!--
       - primary meta tags
@@ -208,8 +214,8 @@
                             <span class="card-badge">New</span>
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-1.png" width="384" height="480" loading="lazy" alt="Black Night"
-                                     class="img-cover">
+                                <img src="./assets/images/my (1).jpg" width="384" height="480" loading="lazy" alt="Black Night"
+                                     class="img-mystery">
 
                                 <div class="card-action">
 
@@ -235,7 +241,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">Black Night</a>
+                                    <a href="#" class="card-title">The Hound</a>
                                 </h3>
 
                                 <data class="card-price" value="80">$80.00</data>
@@ -257,8 +263,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-2.png" width="384" height="480" loading="lazy"
-                                     alt="About The First Night" class="img-cover">
+                                <img src="./assets/images/my (1).webp" width="384" height="480" loading="lazy"
+                                     alt="About The First Night" class="img-mystery">
 
                                 <div class="card-action">
 
@@ -284,7 +290,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">About The First Night</a>
+                                    <a href="#" class="card-title">The Truth Unravels</a>
                                 </h3>
 
                                 <data class="card-price" value="19">$19.00</data>
@@ -306,8 +312,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-3.png" width="384" height="480" loading="lazy" alt="Open The Sky"
-                                     class="img-cover">
+                                <img src="./assets/images/my (2).jpg" width="384" height="480" loading="lazy" alt="Open The Sky"
+                                     class="img-mystery">
 
                                 <div class="card-action">
 
@@ -333,7 +339,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">Open The Sky</a>
+                                    <a href="#" class="card-title">MidNight Kill</a>
                                 </h3>
 
                                 <data class="card-price" value="80">$80.00</data>
@@ -355,8 +361,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-4.png" width="384" height="480" loading="lazy" alt="Book Hard Cover"
-                                     class="img-cover">
+                                <img src="./assets/images/my (3).jpg" width="384" height="480" loading="lazy" alt="Book Hard Cover"
+                                     class="img-mystery">
 
                                 <div class="card-action">
 
@@ -382,7 +388,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">Book Hard Cover</a>
+                                    <a href="#" class="card-title">The Lost Daughter</a>
                                 </h3>
 
                                 <data class="card-price" value="55">$55.00</data>
@@ -404,8 +410,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-5.png" width="384" height="480" loading="lazy"
-                                     alt="The Big Book Of Science" class="img-cover">
+                                <img src="./assets/images/my (4).jpg" width="384" height="480" loading="lazy"
+                                     alt="The Big Book Of Science" class="img-mystery">
 
                                 <div class="card-action">
 
@@ -431,7 +437,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">The Big Book Of Science</a>
+                                    <a href="#" class="card-title">His Perfect Crime</a>
                                 </h3>
 
                                 <data class="card-price" value="100">$100.00</data>
@@ -453,8 +459,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-6.png" width="384" height="480" loading="lazy" alt="By The Air"
-                                     class="img-cover">
+                                <img src="./assets/images/my (5).jpg" width="384" height="480" loading="lazy" alt="By The Air"
+                                     class="img-mystery">
 
                                 <div class="card-action">
 
@@ -480,7 +486,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">By The Air</a>
+                                    <a href="#" class="card-title">Her Last Walk Home</a>
                                 </h3>
 
                                 <data class="card-price" value="89">$89.00</data>
@@ -502,8 +508,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-7.png" width="384" height="480" loading="lazy"
-                                     alt="Murdering Last Year" class="img-cover">
+                                <img src="./assets/images/my (6).jpg" width="384" height="480" loading="lazy"
+                                     alt="Murdering Last Year" class="img-mystery">
 
                                 <div class="card-action">
 
@@ -529,7 +535,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">Murdering Last Year</a>
+                                    <a href="#" class="card-title">Then She Was Gone</a>
                                 </h3>
 
                                 <data class="card-price" value="34">$34.00</data>
@@ -551,8 +557,8 @@
                         <div class="product-card">
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-8.png" width="384" height="480" loading="lazy" alt="Stay Healthy"
-                                     class="img-cover">
+                                <img src="./assets/images/my (2).webp" width="384" height="480" loading="lazy" alt="Stay Healthy"
+                                     class="img-mystery">
 
                                 <div class="card-action">
 
@@ -578,7 +584,7 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">Stay Healthy</a>
+                                    <a href="#" class="card-title">Night Caller</a>
                                 </h3>
 
                                 <data class="card-price" value="67">$67.00</data>

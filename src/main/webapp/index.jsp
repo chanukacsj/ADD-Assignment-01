@@ -149,10 +149,12 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="childrenBook.jsp">Children’s Books</a></li>
                                 <li><a class="dropdown-item" href="mystery&Thriller.jsp">Mystery & Thriller</a></li>
-                                <li><a class="dropdown-item" href="romance.jsp">Romance</a></li>
+                                <li><a  class="dropdown-item" href="<%= request.getContextPath() %>/romance-servlet">Romance</a></li>
                             </ul>
                         </div>
                     </li>
+<%--                    <a href="<%= request.getContextPath() %>/juweraly" class="btn btn-primary mb-3 text-right">--%>
+
 
                 </ul>
 
@@ -169,6 +171,8 @@
 
     <div class="overlay" data-overlay data-nav-toggler></div>
 </header>
+
+<%--==============Cart===================--%>
 
 <section>
     <div class="card">
