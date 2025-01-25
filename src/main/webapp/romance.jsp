@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="lk.ijse.aadassingment01.model.ProductDTO" %><%--
   Created by IntelliJ IDEA.
   User: CHANUKA
   Date: 1/20/2025
@@ -197,6 +198,9 @@
           - #FEATURED COLLECTION
         -->
 
+
+
+
         <section class="section featured " id="FEATURED-COLLECTION" aria-label="featured collection">
             <div class="container">
 
@@ -208,13 +212,24 @@
 
                 <ul class="grid-list">
 
+                    <%
+                        List<ProductDTO> productList = (List<ProductDTO>) request.getAttribute("productList");
+                        if (productList != null && !productList.isEmpty()) {
+                            System.out.println(productList+"jsp");
+
+                    %>
+                    <%
+                        for ( ProductDTO product : productList) {
+
+                    %>
+
                     <li>
                         <div class="product-card">
 
                             <span class="card-badge">New</span>
 
                             <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/book-1.png" width="384" height="480" loading="lazy" alt="Black Night"
+                                <img src="./assets/images/<%=product.getImageUrl()%>" width="384" height="480" loading="lazy" alt="Black Night"
                                      class="img-cover">
 
                                 <div class="card-action">
@@ -241,10 +256,10 @@
                             <div class="card-content">
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">Black Night</a>
+                                    <a href="#" class="card-title"><%=product.getName()%></a>
                                 </h3>
 
-                                <data class="card-price" value="80">$80.00</data>
+                                <data class="card-price" ><%=product.getPrice()%></data>
 
                                 <div class="rating-wrapper">
                                     <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
@@ -258,349 +273,17 @@
 
                         </div>
                     </li>
-
-                    <li>
-                        <div class="product-card">
-
-                            <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/romance (2).jpg" loading="lazy"
-                                     alt="About The First Night" class="img-romance">
-
-                                <div class="card-action">
-
-                                    <button class="action-btn" aria-label="quick view" title="Quick View">
-                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to wishlist" title="Add to Wishlist">
-                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="compare" title="Compare">
-                                        <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to cart" title="Add to Cart">
-                                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">Kingdom Dark</a>
-                                </h3>
-
-                                <data class="card-price" value="19">$19.00</data>
-
-                                <div class="rating-wrapper">
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="product-card">
-
-                            <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/romance (3).jpg" width="384" height="480" loading="lazy" alt="Open The Sky"
-                                     class="img-romance">
-
-                                <div class="card-action">
-
-                                    <button class="action-btn" aria-label="quick view" title="Quick View">
-                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to wishlist" title="Add to Wishlist">
-                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="compare" title="Compare">
-                                        <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to cart" title="Add to Cart">
-                                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">Demon's Sweetheart</a>
-                                </h3>
-
-                                <data class="card-price" value="80">$80.00</data>
-
-                                <div class="rating-wrapper">
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="product-card">
-
-                            <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/romance (4).jpg" width="384" height="480" loading="lazy" alt="Book Hard Cover"
-                                     class="img-romance">
-
-                                <div class="card-action">
-
-                                    <button class="action-btn" aria-label="quick view" title="Quick View">
-                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to wishlist" title="Add to Wishlist">
-                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="compare" title="Compare">
-                                        <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to cart" title="Add to Cart">
-                                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">The Art Of Love</a>
-                                </h3>
-
-                                <data class="card-price" value="55">$55.00</data>
-
-                                <div class="rating-wrapper">
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="product-card">
-
-                            <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/romance.(2).jpg" width="384" height="480" loading="lazy"
-                                     alt="The Big Book Of Science" class="img-romance">
-
-                                <div class="card-action">
-
-                                    <button class="action-btn" aria-label="quick view" title="Quick View">
-                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to wishlist" title="Add to Wishlist">
-                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="compare" title="Compare">
-                                        <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to cart" title="Add to Cart">
-                                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">The Wolf Prince 2</a>
-                                </h3>
-
-                                <data class="card-price" value="100">$100.00</data>
-
-                                <div class="rating-wrapper">
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="product-card">
-
-                            <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/romance..jpg" width="384" height="480" loading="lazy" alt="By The Air"
-                                     class="img-romance">
-
-                                <div class="card-action">
-
-                                    <button class="action-btn" aria-label="quick view" title="Quick View">
-                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to wishlist" title="Add to Wishlist">
-                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="compare" title="Compare">
-                                        <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to cart" title="Add to Cart">
-                                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">The Wolf Prince's Mate</a>
-                                </h3>
-
-                                <data class="card-price" value="89">$89.00</data>
-
-                                <div class="rating-wrapper">
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="product-card">
-
-                            <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/romance.jpeg" width="384" height="480" loading="lazy"
-                                     alt="Murdering Last Year" class="img-romance">
-
-                                <div class="card-action">
-
-                                    <button class="action-btn" aria-label="quick view" title="Quick View">
-                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to wishlist" title="Add to Wishlist">
-                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="compare" title="Compare">
-                                        <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to cart" title="Add to Cart">
-                                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">A Part Of You</a>
-                                </h3>
-
-                                <data class="card-price" value="34">$34.00</data>
-
-                                <div class="rating-wrapper">
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="product-card">
-
-                            <div class="card-banner img-holder" style="--width: 384; --height: 480;">
-                                <img src="./assets/images/romance.jpg" width="384" height="480" loading="lazy" alt="Stay Healthy"
-                                     class="img-romance">
-
-                                <div class="card-action">
-
-                                    <button class="action-btn" aria-label="quick view" title="Quick View">
-                                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to wishlist" title="Add to Wishlist">
-                                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="compare" title="Compare">
-                                        <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                    <button class="action-btn" aria-label="add to cart" title="Add to Cart">
-                                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">His Rejected Mate</a>
-                                </h3>
-
-                                <data class="card-price" value="67">$67.00</data>
-
-                                <div class="rating-wrapper">
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
+                    <%
+                        }
+
+                    %>
+                    <%
+                        } else {
+                    %>
+                    <p>No products found.</p>
+                    <%
+                        }
+                    %>
 
                 </ul>
 
