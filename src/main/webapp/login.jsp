@@ -61,6 +61,28 @@
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
     </div> -->
+
+    <%
+        String message = request.getParameter("message");
+        if (message != null && !message.isEmpty()) {
+    %>
+    <script>
+        alert("<%= message %>");
+    </script>
+    <%
+        }
+    %>
+    <%
+        String error = request.getParameter("error");
+        if (error != null) {
+    %>
+    <script>
+        alert("<%= error %>");
+    </script>
+    <%
+        }
+    %>
+
     <div class="forms-container">
         <div class="signin-signup">
             <form action="login-servlet" method="post" class="sign-in-form">

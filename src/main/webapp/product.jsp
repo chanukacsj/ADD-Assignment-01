@@ -380,25 +380,25 @@
                     </div>
                 </div>
 
-                <!-- Display Feedback Messages -->
-                <%
-                    String status = request.getParameter("status");
-                    String message = request.getParameter("message");
 
-                    if (status != null && message != null) {
-                        if ("success".equals(status)) {
-                %>
-                <div class="alert alert-success" role="alert">
-                    <%= message %>
-                </div>
                 <%
-                } else if ("failure".equals(status) || "error".equals(status)) {
+                    String message = request.getParameter("message");
+                    if (message != null && !message.isEmpty()) {
                 %>
-                <div class="alert alert-danger" role="alert">
-                    <%= message %>
-                </div>
+                <script>
+                    alert("<%= message %>");
+                </script>
                 <%
-                        }
+                    }
+                %>
+                <%
+                    String error = request.getParameter("error");
+                    if (error != null) {
+                %>
+                <script>
+                    alert("<%= error %>");
+                </script>
+                <%
                     }
                 %>
 
@@ -410,7 +410,7 @@
 
                 %>
 
-                <table>
+                <table class="table table-bordered">
                     <thead>
                     <tr>
                         <td>ID</td>
@@ -455,7 +455,6 @@
                                     onclick="deleteProduct('<%= product.getProductID() %>')">
                                 Delete
                             </button>
-
                         </td>
                     </tr>
                     <% } %>

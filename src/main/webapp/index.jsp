@@ -19,11 +19,12 @@
     <meta name="title" content="Booken - Get Your New Book Collections">
     <meta name="description" content="This is a Book eCommerce html template made by codewithsadee">
     <style>
-        .dropdown{
+        .dropdown {
             margin-top: 6px;
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--
       - favicon
     -->
@@ -57,6 +58,29 @@
   - #HEADER
 -->
 
+
+<%
+    String message = request.getParameter("message");
+    if (message != null && !message.isEmpty()) {
+%>
+<script>
+    alert("<%= message %>");
+</script>
+<%
+    }
+%>
+<%
+    String error = request.getParameter("error");
+    if (error != null) {
+%>
+<script>
+    alert("<%= error %>");
+</script>
+<%
+    }
+%>
+
+
 <header class="header" data-header>
     <div class="header-top">
         <div class="container">
@@ -74,11 +98,14 @@
 
             <div class="header-action">
 
-                <button class="header-action-btn" aria-label="cart" title="Cart">
-                    <span class="span">0</span>
+                <a href="cart.jsp">
+                    <button class="header-action-btn" aria-label="cart" title="Cart">
+                        <span class="span">0</span>
 
-                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                </button>
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </a>
+
 
                 <button class="nav-open-btn" aria-label="open menu" title="Open Menu" data-nav-toggler>
                     <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -137,6 +164,12 @@
                     <li>
                         <a href="product.jsp" class="navbar-link">Product</a>
                     </li>
+                    <li>
+                        <a href="Category.jsp" class="navbar-link">Category</a>
+                    </li>
+                    <li>
+                        <a href="user.jsp" class="navbar-link">User</a>
+                    </li>
 
 
                     <li>
@@ -149,11 +182,12 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="childrenBook.jsp">Children’s Books</a></li>
                                 <li><a class="dropdown-item" href="mystery&Thriller.jsp">Mystery & Thriller</a></li>
-                                <li><a  class="dropdown-item" href="<%= request.getContextPath() %>/romance-servlet">Romance</a></li>
+                                <li><a class="dropdown-item" href="<%= request.getContextPath() %>/romance-servlet">Romance</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
-<%--                    <a href="<%= request.getContextPath() %>/juweraly" class="btn btn-primary mb-3 text-right">--%>
+                    <%--                    <a href="<%= request.getContextPath() %>/juweraly" class="btn btn-primary mb-3 text-right">--%>
 
 
                 </ul>
@@ -174,17 +208,6 @@
 
 <%--==============Cart===================--%>
 
-<section>
-    <div class="card">
-        <h1>Cart</h1>
-        <ul class="listCard">
-        </ul>
-        <div class="checkOut">
-            <div class="total">0</div>
-            <div class="closeShopping">Close</div>
-        </div>
-    </div>
-</section>
 
 <main>
     <article>
@@ -1542,8 +1565,12 @@
   - custom js link
 -->
 <script src="./assets/js/script.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 
 <!--
   - ionicon link

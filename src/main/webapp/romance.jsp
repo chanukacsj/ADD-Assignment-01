@@ -88,11 +88,13 @@
 
             <div class="header-action">
 
-                <button class="header-action-btn" aria-label="cart" title="Cart">
-                    <span class="quantity">0</span>
+                <a href="cart.jsp">
+                    <button class="header-action-btn" aria-label="cart" title="Cart">
+                        <span class="span">0</span>
 
-                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                </button>
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </a>
 
                 <button class="nav-open-btn" aria-label="open menu" title="Open Menu" data-nav-toggler>
                     <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -198,6 +200,27 @@
           - #FEATURED COLLECTION
         -->
 
+
+        <%
+            String message = request.getParameter("message");
+            if (message != null && !message.isEmpty()) {
+        %>
+        <script>
+            alert("<%= message %>");
+        </script>
+        <%
+            }
+        %>
+        <%
+            String error = request.getParameter("error");
+            if (error != null) {
+        %>
+        <script>
+            alert("<%= error %>");
+        </script>
+        <%
+            }
+        %>
 
 
 
