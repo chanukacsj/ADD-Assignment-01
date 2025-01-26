@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -20,6 +21,7 @@ public class UserUpdateServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("User update servlet");
 
         String idParam = req.getParameter("id");
         String name = req.getParameter("name");
@@ -28,25 +30,35 @@ public class UserUpdateServlet extends HttpServlet {
         String role = req.getParameter("role");
         String isActive = req.getParameter("isActive");
 
+        System.out.println("isActive parameter: " + isActive);
+
         try {
             int id = Integer.parseInt(idParam);
-            boolean isActiveInt = Boolean.parseBoolean(isActive);
 
+            // Convert isActive to boolean based on its actual value
+            boolean isActiveBoolean;
+            if ("1".equals(isActive)) {
+                isActiveBoolean = true;
+            } else if ("0".equals(isActive)) {
+                isActiveBoolean = false;
+            } else {
+                throw new IllegalArgumentException("Invalid value for isActive: " + isActive);
+            }
+
+            System.out.println("isActiveBoolean: " + isActiveBoolean);
 
             try (Connection connection = dataSource.getConnection();
-                 PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET name = ?, email = ?, password = ?, role = ?, is_active = ? WHERE user_id = ?")) {
+                 PreparedStatement preparedStatement = connection.prepareStatement(
+                         "UPDATE users SET name = ?, email = ?, password = ?, role = ?, is_active = ? WHERE user_id = ?")) {
 
                 preparedStatement.setString(1, name);
                 preparedStatement.setString(2, email);
                 preparedStatement.setString(3, password);
                 preparedStatement.setString(4, role);
-                preparedStatement.setBoolean(5, isActiveInt);
+                preparedStatement.setBoolean(5, isActiveBoolean); // Set the boolean value
                 preparedStatement.setInt(6, id);
 
                 int i = preparedStatement.executeUpdate();
-
-                preparedStatement.close();
-                connection.close();
 
                 if (i > 0) {
                     System.out.println("User updated successfully");
@@ -62,7 +74,12 @@ public class UserUpdateServlet extends HttpServlet {
             }
 
         } catch (NumberFormatException e) {
-            resp.sendRedirect("user.jsp");
+            System.out.println("Invalid id format: " + idParam);
+            resp.sendRedirect("user.jsp?error=Invalid user ID");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            resp.sendRedirect("user.jsp?error=" + URLEncoder.encode(e.getMessage(), "UTF-8"));
         }
     }
+
 }
