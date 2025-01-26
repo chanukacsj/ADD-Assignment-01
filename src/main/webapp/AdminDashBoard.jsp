@@ -35,20 +35,20 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="user.jsp">
                 <i class='bx bxs-group' ></i>
                 <span class="text">Users & Admin Management</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="Category.jsp">
                 <i class='bx bxs-shopping-bag-alt' ></i>
                 <span class="text">Category Management </span>
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="product.jsp">
                 <i class='bx bxs-message-dots' ></i>
                 <span class="text">Product Management</span>
             </a>
@@ -63,7 +63,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="logout">
+            <a href="login.jsp" class="logout">
                 <i class='bx bxs-log-out-circle' ></i>
                 <span class="text">Logout</span>
             </a>

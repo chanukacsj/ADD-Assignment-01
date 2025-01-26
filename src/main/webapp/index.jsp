@@ -161,15 +161,15 @@
                         <a href="#" class="navbar-link">About Us</a>
                     </li>
 
-                    <li>
-                        <a href="product.jsp" class="navbar-link">Product</a>
-                    </li>
-                    <li>
-                        <a href="Category.jsp" class="navbar-link">Category</a>
-                    </li>
-                    <li>
-                        <a href="user.jsp" class="navbar-link">User</a>
-                    </li>
+<%--                    <li>--%>
+<%--                        <a href="product.jsp" class="navbar-link">Product</a>--%>
+<%--                    </li>--%>
+<%--                    <li>--%>
+<%--                        <a href="Category.jsp" class="navbar-link">Category</a>--%>
+<%--                    </li>--%>
+<%--                    <li>--%>
+<%--                        <a href="user.jsp" class="navbar-link">User</a>--%>
+<%--                    </li>--%>
 
 
                     <li>
