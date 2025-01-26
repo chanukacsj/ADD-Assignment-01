@@ -81,5 +81,4 @@ public class UserSaveServlet extends HttpServlet {
             resp.sendRedirect("user.jsp?error=" + URLEncoder.encode(message, "UTF-8"));
         }
     }
-
 }
