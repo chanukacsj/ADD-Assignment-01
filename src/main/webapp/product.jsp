@@ -76,9 +76,9 @@
             <div class="left">
                 <h1>Products Management</h1>
                 <ul class="breadcrumb">
-                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Dashboard</a></li>
                     <li><i class='bx bx-chevron-right'></i></li>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" class="active">Product Management</a></li>
                 </ul>
             </div>
         </div>
@@ -230,7 +230,9 @@
             </tr>
             </thead>
             <tbody>
-            <% for (ProductDTO product : productList) { %>
+            <% for (ProductDTO product : productList) {
+                System.out.println(product.getImageUrl());
+            %>
             <tr>
                 <td><%= product.getProductID() %>
                 </td>

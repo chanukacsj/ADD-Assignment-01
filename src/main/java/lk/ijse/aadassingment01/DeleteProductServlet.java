@@ -23,6 +23,7 @@ public class DeleteProductServlet extends HttpServlet {
         System.out.println("Product delete request received");
 
         String productIDParam = req.getParameter("productID");
+
         System.out.println("productIDParam: " + productIDParam);
 
         // Validate productID parameter

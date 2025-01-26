@@ -83,9 +83,9 @@
             <div class="left">
                 <h1>Category Management</h1>
                 <ul class="breadcrumb">
-                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Dashboard</a></li>
                     <li><i class='bx bx-chevron-right'></i></li>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" class="active">Category Management</a></li>
                 </ul>
             </div>
         </div>
