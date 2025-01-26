@@ -32,26 +32,35 @@ public class LoginServlet extends HttpServlet {
         }
 
         try (Connection connection = dataSource.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("SELECT email, password FROM users WHERE email = ?")) {
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT email,password, role,is_active FROM users WHERE email = ?")) {
 
             preparedStatement.setString(1, email);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            String dbEmail = null;
-            String dbPassword = null;
-
             if (resultSet.next()) {
-                dbEmail = resultSet.getString("email");
-                dbPassword = resultSet.getString("password");
-            }
+                String dbEmail = resultSet.getString("email");
+                String dbPassword = resultSet.getString("password");
+                String dbRole = resultSet.getString("role");
+                boolean dbIsActive = resultSet.getBoolean("is_active");
 
-            if (email.equals(dbEmail) && password.equals(dbPassword)) {
-                System.out.println("User logged in successfully!");
-                String alertMessage = "User logged in successfully!";
-                resp.sendRedirect("index.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));
+                if (!dbIsActive) {
+                    String alertMessage = "User is not active. Please contact the administrator.";
+                    resp.sendRedirect("login.jsp?error=" + URLEncoder.encode(alertMessage, "UTF-8"));
+                    return;
+                }
+
+                if (email.equals(dbEmail) && password.equals(dbPassword)) {
+                    if ("ADMIN".equals(dbRole)) {
+                        resp.sendRedirect("AdminDashBoard.jsp?message=" + URLEncoder.encode("Welcome, Admin!", "UTF-8"));
+                    } else {
+                        resp.sendRedirect("index.jsp?message=" + URLEncoder.encode("Welcome!", "UTF-8"));
+                    }
+                } else {
+                    String alertMessage = "Login failed! Invalid email or password.";
+                    resp.sendRedirect("login.jsp?error=" + URLEncoder.encode(alertMessage, "UTF-8"));
+                }
             } else {
-                System.out.println("Login failed! Invalid email or password.");
-                String alertMessage = "Login failed! Invalid email or password.";
+                String alertMessage = "No user found with the given email.";
                 resp.sendRedirect("login.jsp?error=" + URLEncoder.encode(alertMessage, "UTF-8"));
             }
 
@@ -59,5 +68,4 @@ public class LoginServlet extends HttpServlet {
             throw new RuntimeException("Database error occurred", e);
         }
     }
-
 }

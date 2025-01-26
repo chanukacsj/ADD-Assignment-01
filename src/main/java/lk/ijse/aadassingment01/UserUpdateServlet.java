@@ -24,13 +24,20 @@ public class UserUpdateServlet extends HttpServlet {
         System.out.println("User update servlet");
 
         String idParam = req.getParameter("id");
-        String name = req.getParameter("name");
-        String email = req.getParameter("email");
-        String password = req.getParameter("password");
         String role = req.getParameter("role");
         String isActive = req.getParameter("isActive");
 
         System.out.println("isActive parameter: " + isActive);
+
+        if (role == null || isActive == null) {
+            String message = "All fields are required.";
+            resp.sendRedirect("user.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
+            return;
+        }
+        if (isActive.isEmpty()) {
+            isActive = "0";
+        }
+
 
         try {
             int id = Integer.parseInt(idParam);
@@ -49,14 +56,10 @@ public class UserUpdateServlet extends HttpServlet {
 
             try (Connection connection = dataSource.getConnection();
                  PreparedStatement preparedStatement = connection.prepareStatement(
-                         "UPDATE users SET name = ?, email = ?, password = ?, role = ?, is_active = ? WHERE user_id = ?")) {
-
-                preparedStatement.setString(1, name);
-                preparedStatement.setString(2, email);
-                preparedStatement.setString(3, password);
-                preparedStatement.setString(4, role);
-                preparedStatement.setBoolean(5, isActiveBoolean); // Set the boolean value
-                preparedStatement.setInt(6, id);
+                         "UPDATE users SET role = ?, is_active = ? WHERE user_id = ?")) {
+                preparedStatement.setString(1, role);
+                preparedStatement.setBoolean(2, isActiveBoolean); // Set the boolean value
+                preparedStatement.setInt(3, id);
 
                 int i = preparedStatement.executeUpdate();
 
