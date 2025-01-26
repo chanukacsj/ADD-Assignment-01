@@ -70,7 +70,7 @@
             <span class="num">8</span>
         </a>
         <a href="#" class="profile">
-            <img src="img/people.png" alt="Profile Image">
+            <img src="./assets/images/blue-circle-with-white-user-b.png" alt="Profile Image">
         </a>
     </nav>
     <!-- NAVBAR -->
@@ -94,7 +94,7 @@
                 Add New Admin
             </button>
             <button type="button"
-                    class="btn btn-product btn-primary mb-5 text-right" style="margin-top: 3rem; "
+                    class="btn btn-product btn-success mb-5 text-right" style="margin-top: 3rem; "
                     onclick="window.location.href='/AAD_Assingment_01_war_exploded/user-all-servlet';">
                     View All Users & Admin
             </button>

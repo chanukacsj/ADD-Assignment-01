@@ -65,7 +65,7 @@
             <span class="num">8</span>
         </a>
         <a href="#" class="profile">
-            <img src="img/people.png" alt="Profile Image">
+            <img src="./assets/images/blue-circle-with-white-user-b.png" alt="Profile Image">
         </a>
     </nav>
     <!-- NAVBAR -->

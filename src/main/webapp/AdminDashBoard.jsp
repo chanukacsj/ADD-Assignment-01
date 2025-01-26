@@ -93,7 +93,7 @@
             <span class="num">8</span>
         </a>
         <a href="#" class="profile">
-            <img src="img/people.png">
+            <img src="./assets/images/blue-circle-with-white-user-b.png">
         </a>
     </nav>
     <!-- NAVBAR -->
@@ -162,40 +162,40 @@
                     <tbody>
                     <tr>
                         <td>
-                            <img src="img/people.png">
-                            <p>John Doe</p>
+                            <img src="./assets/images/blue-circle-with-white-user-b.png">
+                            <p>Danuka</p>
                         </td>
                         <td>01-10-2021</td>
                         <td><span class="status completed">Completed</span></td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="img/people.png">
-                            <p>Alex Doe</p>
+                            <img src="./assets/images/blue-circle-with-white-user-b.png">
+                            <p>Sandaru</p>
                         </td>
                         <td>01-10-2021</td>
                         <td><span class="status pending">Pending</span></td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="img/people.png">
-                            <p>Sarah Doe</p>
+                            <img src="./assets/images/blue-circle-with-white-user-b.png">
+                            <p>Suresh</p>
                         </td>
                         <td>01-10-2021</td>
                         <td><span class="status process">Process</span></td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="img/people.png">
-                            <p>Alex Doe</p>
+                            <img src="./assets/images/blue-circle-with-white-user-b.png">
+                            <p>Induwara</p>
                         </td>
                         <td>01-10-2021</td>
                         <td><span class="status pending">Pending</span></td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="img/people.png">
-                            <p>John Doe</p>
+                            <img src="./assets/images/blue-circle-with-white-user-b.png">
+                            <p>Kasun</p>
                         </td>
                         <td>01-10-2021</td>
                         <td><span class="status completed">Completed</span></td>
