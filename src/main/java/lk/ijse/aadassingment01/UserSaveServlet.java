@@ -28,13 +28,13 @@ public class UserSaveServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String roleStr = req.getParameter("role");
-        String isActiveStr = req.getParameter("isActive");
+//        String isActiveStr = req.getParameter("isActive");
 
-        System.out.println(name + " " + email + " " + password + " " + roleStr + " " + isActiveStr);
+        System.out.println(name + " " + email + " " + password + " " + roleStr + " ");
 
         // Validate inputs
-        if (name == null || email == null || password == null || roleStr == null || isActiveStr == null ||
-                name.isEmpty() || email.isEmpty() || password.isEmpty() || roleStr.isEmpty() || isActiveStr.isEmpty()) {
+        if (name == null || email == null || password == null || roleStr == null ||
+                name.isEmpty() || email.isEmpty() || password.isEmpty() || roleStr.isEmpty()) {
 
             String message = "All fields are required.";
             resp.sendRedirect("user.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
@@ -46,19 +46,16 @@ public class UserSaveServlet extends HttpServlet {
             UserDTO.Role role = UserDTO.Role.fromString(roleStr); // Converts the role string to an enum value
 
             // Convert the string value to a boolean (or numeric value for TINYINT(1))
-            boolean isActive = Boolean.parseBoolean(isActiveStr); // Will be true or false
-            int isActiveInt = isActive ? 1 : 0;                  // Convert to 1 or 0 for TINYINT
 
             // Database operations
             try (Connection connection = dataSource.getConnection();
                  PreparedStatement preparedStatement = connection.prepareStatement(
-                         "INSERT INTO users (name, email, password, role, is_active) VALUES (?, ?, ?, ?, ?)")) {
+                         "INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)")) {
 
                 preparedStatement.setString(1, name);
                 preparedStatement.setString(2, email);
                 preparedStatement.setString(3, password);
                 preparedStatement.setString(4, role.name()); // Save the role as a string (e.g., ADMIN or CUSTOMER)
-                preparedStatement.setInt(5, isActiveInt);   // Save TINYINT(1) as 0 or 1
 
                 int rowsAffected = preparedStatement.executeUpdate();
 

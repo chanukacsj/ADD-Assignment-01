@@ -129,14 +129,14 @@
                                     <option value="CUSTOMER">Customer</option>
                                 </select>
                             </div>
-                            <div class="mb-3 mt-3">
-                                <label for="isActive" class="form-label" style="color: black;">Is Active</label>
-                                <select class="form-control" name="isActive" id="isActive">
-                                    <option value="" disabled selected>Select status</option>
-                                    <option value="true">Active</option>
-                                    <option value="false">Inactive</option>
-                                </select>
-                            </div>
+<%--                            <div class="mb-3 mt-3">--%>
+<%--                                <label for="isActive" class="form-label" style="color: black;">Is Active</label>--%>
+<%--                                <select class="form-control" name="isActive" id="isActive">--%>
+<%--                                    <option value="" disabled selected>Select status</option>--%>
+<%--                                    <option value="true">Active</option>--%>
+<%--                                    <option value="false">Inactive</option>--%>
+<%--                                </select>--%>
+<%--                            </div>--%>
 
 
                             <div class="modal-footer mt-3 flex-row justify-content-center">
